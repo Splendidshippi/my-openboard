@@ -6,7 +6,7 @@ const app = express(); //app initialize and server ready
 
 app.use(express.static("public"));//public folder me jake index.html ko display krega
 
-let port = 5500; //dataflow ka to&fro motion kuch bhi ho skta h
+let port = process.env.PORT || 5500; //dataflow ka to&fro motion kuch bhi ho skta h
 let server = app.listen(port, () => { //listen krna start 
     console.log("Listening to port " + port);
 })
